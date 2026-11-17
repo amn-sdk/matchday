@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Amine Saddik · Matchday</title>
+    <meta
+      name="description"
+      content="Interactive 3D portfolio of Amine Saddik, software engineer (AI, 3D, software engineering). Dribble the ball to meet the projects."
+    />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="scene" aria-hidden="true"></div>
+
+    <header class="hud-top">
+      <button class="brand" data-open="about" aria-label="About Amine Saddik">
+        <span class="brand-mark">AS</span>
+        <span class="brand-text">
+          <strong>Amine Saddik</strong>
+          <small>Software Engineer · AI · 3D</small>
+        </span>
+      </button>
+      <nav class="hud-nav" aria-label="Sections">
+        <button data-open="squad">Squad</button>
+        <button data-open="career">Career</button>
+        <button data-open="skills">Skills</button>
+        <button data-open="contact">Contact</button>
+        <button data-open="resume">Resume</button>
+      </nav>
+    </header>
+
+    <div class="hud-score" aria-live="polite">
+      <span>Goals</span>
+      <strong id="score">0</strong>
+    </div>
+
+    <div class="hud-hint" id="hint">
+      <span class="desktop-only"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> or arrows to dribble · <kbd>Space</kbd> to shoot · click a player</span>
+      <span class="touch-only">Tap the pitch to move the ball · tap a player to open a project</span>
+    </div>
+
+    <button class="btn mobile-menu-btn" data-open="menu">☰ Menu</button>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <aside class="panel" id="panel" role="dialog" aria-modal="false" aria-labelledby="panel-title" hidden>
+      <button class="panel-close" id="panel-close" aria-label="Close panel">✕</button>
+      <div class="panel-body" id="panel-body"></div>
+    </aside>
+
+    <section class="intro" id="intro">
+      <div class="intro-card">
+        <p class="intro-eyebrow">Matchday · Portfolio</p>
+        <h1>Amine Saddik</h1>
+        <p class="intro-title">Software Engineer · AI · 3D</p>
+        <p class="intro-text">
+          Welcome to my pitch. Every player on the field is one of my projects. Dribble the ball into a player to open
+          the case study, and score in the far goal to get in touch.
+        </p>
+        <div class="intro-actions">
+          <button class="btn btn-primary" id="kickoff">Kick off</button>
+          <button class="btn" data-open="squad" id="skip">See the squad list</button>
+        </div>
+        <p class="intro-small">Prefer a classic layout? <a id="classic-link" href="#">Open the classic portfolio</a></p>
+      </div>
+    </section>
+
+    <noscript>
+      <p style="padding: 24px">This portfolio needs JavaScript. Projects: github.com/amn-sdk</p>
+    </noscript>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
