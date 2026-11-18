@@ -26,7 +26,7 @@ export const profile = {
   ],
   links: {
     github: 'https://github.com/amn-sdk',
-    linkedin: 'https://www.linkedin.com/in/amine-saddik-070306267/',
+    linkedin: 'https://www.linkedin.com/in/amine-saddik/',
     resume: '#/resume',
     site: 'https://amn-sdk.github.io/',
     matchday: 'https://amn-sdk.github.io/matchday/',
